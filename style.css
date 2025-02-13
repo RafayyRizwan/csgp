@@ -391,3 +391,86 @@ footer {
     text-decoration: none;
     font-weight: bold;
 }
+
+
+
+
+
+/*      Contact Page   */
+
+
+.contact-section {
+    background: #F4F4F4; 
+    padding: 50px 20px;
+    text-align: center;
+}
+
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; 
+}
+
+
+.contact-section h2 {
+    color: #004080; 
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.contact-section label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    color: #004080;
+}
+
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #004080;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    transition: 0.3s ease-in-out;
+}
+
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #FFD700;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+
+.contact-section button {
+    width: 100%;
+    padding: 12px;
+    background: #FFD700;
+    border: none;
+    color: #004080;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+
+.contact-section button:hover {
+    background: #FFC000;
+    transform: scale(1.05);
+}
