@@ -304,15 +304,15 @@ nav {
     margin: 30px auto;
 }
 
-/* Section Heading */
+
 .newsletter h2 {
-    color: #FFD700; /* Gold */
+    color: #FFD700; 
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-/* Form Styling */
+
 .newsletter form {
     display: flex;
     flex-wrap: wrap;
@@ -321,7 +321,7 @@ nav {
     margin-top: 15px;
 }
 
-/* Input Field */
+
 .newsletter input {
     padding: 14px;
     width: 280px;
@@ -332,17 +332,15 @@ nav {
     background: white;
     transition: 0.3s ease-in-out;
 }
-
-/* Input Focus Effect */
 .newsletter input:focus {
     border-color: #FFC000;
     outline: none;
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
 }
 
-/* Subscribe Button */
+
 .newsletter button {
-    background: #FFD700; /* Gold */
+    background: #FFD700;
     padding: 14px 20px;
     font-size: 16px;
     font-weight: bold;
@@ -474,3 +472,92 @@ footer {
     background: #FFC000;
     transform: scale(1.05);
 }
+
+
+
+/* Registration Page Section */
+.registration-section {
+    background: #F4F4F4; 
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+}
+
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+
+h2 {
+    color: #004080; 
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    color: #004080;
+    margin-bottom: 5px;
+}
+
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #004080;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    transition: 0.3s ease-in-out;
+}
+
+
+input:focus {
+    border-color: #FFD700;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+
+#customer_fields h3 {
+    color: #004080;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #FFD700;
+    border: none;
+    color: #004080;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+
+button:hover {
+    background: #FFC000;
+    transform: scale(1.05);
+}
+
