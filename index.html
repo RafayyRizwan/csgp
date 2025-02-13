@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">Polish Air</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#flights">Flights</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Book Your Next Flight Easily</h1>
+        <p>Find the best deals and travel with ease.</p>
+        <a href="#flights" class="btn">Search Flights</a>
+    </section>
+    
+    <!-- Flight Search Form -->
+    <section id="flights" class="search-section">
+        <h2>Find Your Flight</h2>
+        <form action="#" method="GET">
+            <input type="text" placeholder="Departure City" required>
+            <input type="text" placeholder="Destination City" required>
+            <input type="date" required>
+            <select required>
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First Class</option>
+            </select>
+            <button type="submit" class="btn">Search</button>
+        </form>
+    </section>
+    
+    <!-- Featured Destinations -->
+    <section class="featured-destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destinations">
+            <div class="destination">
+                <img src="images/paris.jpg" alt="Paris">
+                <p>Paris, France</p>
+            </div>
+            <div class="destination">
+                <img src="images/newyork.jpg" alt="New York">
+                <p>New York, USA</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>✔ Best Prices Guaranteed</li>
+            <li>✔ Easy and Secure Booking</li>
+            <li>✔ 24/7 Customer Support</li>
+        </ul>
+    </section>
+    
+    <!-- Customer Reviews -->
+    <section class="customer-reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="review">
+            <p>"Amazing service and great deals on flights!" - Alice</p>
+        </div>
+        <div class="review">
+            <p>"Smooth booking process and friendly support team." - John</p>
+        </div>
+    </section>
+    
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <h2>Stay Updated with Our Best Deals</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Polish Air. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
