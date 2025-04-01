@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard | Airline Management</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Main Styles -->
+    <link rel="stylesheet" href="staff.css"> <!-- Dashboard Styles -->
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Staff Dashboard</h2>
+        <ul>
+            <li><a href="staff.html" class="active">Dashboard</a></li>
+            <li><a href="manageflights.html">Manage Flights</a></li>
+            <li><a href="#">Passenger List</a></li>
+            <li><a href="staffm.html">Staff Management</a></li>
+            <li><a href="staffprofile.html">Profile</a></li>
+            <li><a href="#" class="logout">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <header>
+            <h1>Welcome, Staff Member</h1>
+        </header>
+        
+        <section class="dashboard-cards">
+            <div class="card">
+                <h3>Total Flights</h3>
+                <p>152</p>
+            </div>
+            <div class="card">
+                <h3>Passengers Today</h3>
+                <p>1,245</p>
+            </div>
+            <div class="card">
+                <h3>Staff Members</h3>
+                <p>87</p>
+            </div>
+            <div class="card">
+                <h3>Pending Approvals</h3>
+                <p>14</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="../staffdashboard/js/staffdashboard.js"></script>
+    <script src="../staffdashboard/js/auth.js"></script>
+
+</body>
+</html>

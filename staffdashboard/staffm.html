@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff & Crew Management | Airline Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Staff Dashboard</h2>
+        <ul>
+            <li><a href="staff.html">Dashboard</a></li>
+            <li><a href="manageflights.html">Manage Flights</a></li>
+            <li><a href="#">Passenger List</a></li>
+            <li><a href="staffm.html" class="active">Staff Management</a></li>
+            <li><a href="staffprofile.html">Profile</a></li>
+            <li><a href="#" class="logout">Logout</a></li>
+        </ul> 
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Staff & Crew Management</h1>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <h2>Search Staff</h2>
+            <div class="search-container">
+                <input type="text" id="staffSearch" placeholder="Search by name...">
+                <select id="roleFilter">
+                    <option value="all">All Roles</option>
+                    <option value="Pilot">Pilot</option>
+                    <option value="Cabin Crew">Cabin Crew</option>
+                    <option value="Ground Staff">Ground Staff</option>
+                    <option value="Technician">Technician</option>
+                </select>
+            </div>
+            <table id="searchResults">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Shift</th>
+                        <th>Attendance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Search results will be displayed here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add New Staff Member -->
+        <section class="staff-management">
+            <h2>Add New Staff Member</h2>
+            <form id="addStaffForm">
+                <label for="staffName">Full Name</label>
+                <input type="text" id="staffName" required>
+
+                <label for="staffRole">Role</label>
+                <select id="staffRole" required>
+                    <option value="Pilot">Pilot</option>
+                    <option value="Cabin Crew">Cabin Crew</option>
+                    <option value="Ground Staff">Ground Staff</option>
+                    <option value="Technician">Technician</option>
+                </select>
+
+                <label for="staffShift">Shift</label>
+                <select id="staffShift" required>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Night">Night</option>
+                </select>
+
+                <button type="submit">Add Staff</button>
+            </form>
+
+            <!-- Staff List Table -->
+            <h2>Recent Staff Members</h2>
+            <table id="staffTable">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Role</th>
+                        <th>Shift</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- New Staff Members will be added here -->
+                </tbody>
+            </table>
+
+            <!-- Available Staff Section -->
+            <h2>Available Staff</h2>
+            <table id="availableStaffTable">
+                <thead>
+                    <tr>
+                        <th>Staff Name</th>
+                        <th>Role</th>
+                        <th>Shift</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Available Staff Members will be listed here -->
+                </tbody>
+            </table>
+
+            <!-- Attendance & Performance Section -->
+            <h2>Attendance & Performance</h2>
+            <table id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th>Staff Name</th>
+                        <th>Attendance (%)</th>
+                        <th>Performance Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Attendance Data Added Dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="../staffdashboard/js/auth.js"></script>
+    <script src="../staffdashboard/js/staffm.js"></script>
+
+</body>
+</html>

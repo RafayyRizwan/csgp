@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Management | Airline Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="staff.css">
+    <style>
+        .time-input-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .time-input-group input[type="number"] {
+            width: 80px;
+        }
+        .flight-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .flight-section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .estimated-time {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .duration-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .duration-group .form-group {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Staff Dashboard</h2>
+        <ul>
+            <li><a href="staff.html">Dashboard</a></li>
+            <li><a href="manageflights.html" class="active">Manage Flights</a></li>
+            <li><a href="#">Passenger List</a></li>
+            <li><a href="staffm.html">Staff Management</a></li>
+            <li><a href="staffprofile.html">Profile</a></li>
+            <li><a href="#" class="logout">Logout</a></li>
+        </ul> 
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Flight Management</h1>
+        </header>
+
+        <!-- Add New Flight Section -->
+        <section class="flight-management">
+            <h2>Schedule New Flight</h2>
+            <form id="addFlightForm">
+                <!-- Outbound Flight Section -->
+                <div class="flight-section">
+                    <h3>Outbound Flight</h3>
+                    <div class="form-group">
+                        <label for="departureCity">Departure City</label>
+                        <input type="text" id="departureCity" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destinationCity">Destination City</label>
+                        <input type="text" id="destinationCity" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departureDate">Departure Date</label>
+                        <input type="date" id="departureDate" required 
+                               min="2024-01-01" 
+                               max="2025-12-31">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departureTime">Departure Time</label>
+                        <div class="time-input-group">
+                            <input type="number" id="departureHour" required 
+                                   min="0" max="23" placeholder="Hour"
+                                   oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)">
+                            <span>:</span>
+                            <input type="number" id="departureMinute" required 
+                                   min="0" max="59" placeholder="Minute"
+                                   oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Flight Duration</label>
+                        <div class="duration-group">
+                            <div class="form-group">
+                                <input type="number" id="durationHour" required 
+                                       min="0" max="24" placeholder="Hours"
+                                       oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="durationMinute" required 
+                                       min="0" max="59" placeholder="Minutes"
+                                       oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="estimated-time">
+                        <strong>Estimated Arrival Time:</strong>
+                        <div id="estimatedArrivalTime">Not calculated yet</div>
+                    </div>
+                </div>
+
+                <!-- Return Flight Section -->
+                <div class="flight-section">
+                    <h3>Return Flight</h3>
+                    <div class="form-group">
+                        <label for="returnDate">Return Date</label>
+                        <input type="date" id="returnDate" required 
+                               min="2024-01-01" 
+                               max="2025-12-31">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="returnTime">Return Time</label>
+                        <div class="time-input-group">
+                            <input type="number" id="returnHour" required 
+                                   min="0" max="23" placeholder="Hour"
+                                   oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)">
+                            <span>:</span>
+                            <input type="number" id="returnMinute" required 
+                                   min="0" max="59" placeholder="Minute"
+                                   oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)">
+                        </div>
+                    </div>
+
+                    <div class="estimated-time">
+                        <strong>Estimated Return Arrival Time:</strong>
+                        <div id="estimatedReturnArrivalTime">Not calculated yet</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pilotSelect">Select Pilot</label>
+                    <select id="pilotSelect" required>
+                        <option value="">Select a pilot</option>
+                        <!-- Pilots will be populated here -->
+                    </select>
+                </div>
+
+                <button type="submit">Schedule Flight</button>
+            </form>
+
+            <!-- Available Pilots Section -->
+            <h2>Available Pilots</h2>
+            <table id="availablePilotsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Shift</th>
+                        <th>Status</th>
+                        <th>Next Available</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Available pilots will be listed here -->
+                </tbody>
+            </table>
+
+            <!-- Scheduled Flights Section -->
+            <h2>Scheduled Flights</h2>
+            <table id="scheduledFlightsTable">
+                <thead>
+                    <tr>
+                        <th>Flight ID</th>
+                        <th>Departure</th>
+                        <th>Destination</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                        <th>Pilot</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Scheduled flights will be listed here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="../staffdashboard/js/auth.js"></script>
+    <script src="../staffdashboard/js/manageflights.js"></script>
+
+</body>
+</html> 

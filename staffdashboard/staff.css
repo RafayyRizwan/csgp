@@ -1,0 +1,313 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #004080; /* Navy Blue */
+    color: white;
+    position: fixed;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background: #FFD700; /* Gold */
+    color: #004080;
+}
+
+/* Logout Button */
+.sidebar ul li .logout {
+    background: red;
+    color: white;
+}
+
+.sidebar ul li .logout:hover {
+    background: darkred;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 260px; /* Adjust for sidebar */
+    padding: 20px;
+}
+
+/* Dashboard Header */
+.main-content header {
+    background: #E0E0E0;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.main-content h1 {
+    color: #004080;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+/* Profile Container */
+.profile-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Profile Heading */
+.profile-container h2 {
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+/* Profile Form Labels */
+.profile-container label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: #004080;
+    margin-top: 10px;
+}
+
+/* Profile Form Inputs */
+.profile-container input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #004080;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Update Button */
+.profile-container button {
+    width: 100%;
+    padding: 12px;
+    background: #FFD700;
+    border: none;
+    color: #004080;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.profile-container button:hover {
+    background: #FFC000;
+    transform: scale(1.05);
+}
+
+
+/* Staff Management Section */
+.staff-management {
+    padding: 20px;
+    text-align: center;
+}
+
+.staff-management h2 {
+    color: #004080;
+    margin-top: 20px;
+}
+
+/* Forms */
+.staff-management form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 20px auto;
+}
+
+.staff-management label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+    color: #004080;
+}
+
+.staff-management input,
+.staff-management select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #004080;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.staff-management button {
+    background: #FFD700;
+    padding: 10px 15px;
+    border: none;
+    color: #004080;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.staff-management button:hover {
+    background: #FFC000;
+    transform: scale(1.05);
+}
+
+/* Tables (General Table Styles) */
+.staff-management table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.staff-management table,
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.staff-management th {
+    background: #004080;
+    color: white;
+}
+
+/* Staff Scheduling Table */
+#scheduleTable {
+    margin-top: 20px;
+}
+
+#scheduleTable th {
+    background: #FFD700;
+    color: #004080;
+    font-weight: bold;
+}
+
+/* Dropdown for Shift Changes */
+.change-shift {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #004080;
+    background: white;
+    font-size: 14px;
+}
+
+/* Attendance & Performance Table */
+#attendanceTable {
+    margin-top: 20px;
+}
+
+#attendanceTable th {
+    background: #004080;
+    color: white;
+}
+
+#attendanceTable td {
+    color: #333;
+}
+
+/* Delete Button */
+.staff-management .delete-btn {
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.staff-management .delete-btn:hover {
+    background: darkred;
+}
+
+/* Search Feedback */
+.search-feedback {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #495057;
+}
+
+.search-feedback:empty {
+    display: none;
+}

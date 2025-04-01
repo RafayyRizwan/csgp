@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Profile | Airline Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Staff Dashboard</h2>
+        <ul>
+            <li><a href="staff.html">Dashboard</a></li>
+            <li><a href="manageflights.html">Manage Flights</a></li>
+            <li><a href="#">Passenger List</a></li>
+            <li><a href="staffm.html">Staff Management</a></li>
+            <li><a href="staffprofile.html" class="active">Profile</a></li>
+            <li><a href="#" class="logout">Logout</a></li>
+        </ul> 
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Staff Profile</h1>
+        </header>
+
+        <section class="profile-section">
+            <div class="profile-container">
+                <h2>Update Profile</h2>
+                <form id="profileForm">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+
+                    <label for="department">Department</label>
+                    <input type="text" id="department" required>
+
+                    <button type="submit">Update Profile</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="../staffdashboard/js/auth.js"></script>
+    <script src="../staffdashboard/js/staffprofile.js"></script>
+
+</body>
+</html>
